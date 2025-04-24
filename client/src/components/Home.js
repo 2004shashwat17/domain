@@ -41,7 +41,7 @@ const Home = () => {
   
   const buyFunction = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/payment');
+      const response = await axios.post('https://domain-mnmb.onrender.com/payment');
       if (response.status === 200) {
         window.location.href = response.data.url;
       }

@@ -1,0 +1,52 @@
+.maze-game {
+  text-align: center;
+  padding: 20px;
+  background-image: url("../assets/maze.jpg");
+  height: 660px;
+}
+
+.difficulty-selector {
+  margin-bottom: 20px;
+}
+
+.maze-area {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 30px;
+  border: 2px solid #000;
+  background-color: #3b0606;
+}
+
+.maze-row {
+  display: flex;
+}
+
+.maze-cell {
+  width: 45px;
+  height: 40px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  background-color: #fff;
+}
+
+.maze-cell.player {
+  background-color: yellow;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+.controls button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.score {
+  margin-top: 20px;
+}
+

@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* background-image: url('../assets/puzzle.jpg');  */
+}
+.puzzle-game {
+  text-align: center;
+  padding: 20px;
+}
+
+.difficulty-selector {
+  margin-bottom: 20px;
+}
+
+.puzzle-grid {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+}
+
+.puzzle-piece {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  cursor: pointer;
+  font-size: 24px;
+  background-color: #580404;
+}
+
+.puzzle-piece:active {
+  background-color: #ddd;
+}
+
+.score {
+  margin-top: 20px;
+}

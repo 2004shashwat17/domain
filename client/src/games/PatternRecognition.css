@@ -1,0 +1,60 @@
+.game-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  /* background-image: url("../assets/chocolate.jpeg");  */
+  background-size: cover; /* Ensure the background image covers the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent background from repeating */
+  padding: 20px; /* Add some padding if needed */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+
+.level-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.level-buttons button:hover {
+  background-color: #45a049;
+}
+
+.game-content {
+  margin-top: 30px;
+}
+
+.word {
+  font-size: 48px;
+  margin: 20px 0;
+  cursor: pointer;
+  color: #333;
+}
+
+.word:hover {
+  color: #007BFF;
+}
+
+.game-over {
+  margin-top: 50px;
+}
+
+.game-over button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 5px;
+}
+
+.game-over button:hover {
+  background-color: #e53935;
+}

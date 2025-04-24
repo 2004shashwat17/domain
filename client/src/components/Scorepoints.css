@@ -1,0 +1,80 @@
+/* Scorepoints.css */
+
+/* Styles specific to the body when ScorePoints is rendered */
+.body-scorepoints {
+  background-image: url("../assets/score.gif");
+   /* Example: Light background color */
+  font-family: Arial, sans-serif; /* Example: Font family */
+}
+
+/* Existing styles for the ScorePoints component */
+.score-points {
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.score-points h1 {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.score-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.score-table thead {
+  background-color: #333;
+  color: white;
+}
+
+.score-table th,
+.score-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.score-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.score-table tr:hover {
+  background-color: #ddd;
+}
+
+.score-table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.total-redeem {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.total-points {
+  font-size: 20px;
+  color: #ff6347;
+  margin-bottom: 20px;
+}
+
+.redeem-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.redeem-button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,124 @@
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.mission-section,
+.goals-section,
+.stakeholders-section,
+.commitment-section,
+.looking-ahead-section,
+.join-us-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.mission-section h2,
+.goals-section h2,
+.stakeholders-section h2,
+.commitment-section h2,
+.looking-ahead-section h2,
+.join-us-section h2 {
+    font-size: 2rem;
+    color: #2196F3;
+    margin-bottom: 20px;
+}
+
+.mission-section p,
+.goals-section ul,
+.stakeholders-section p,
+.commitment-section p,
+.looking-ahead-section p,
+.join-us-section p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.story-section {
+    width: 100%;
+    background-color: #e3f2fd;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+}
+
+.story-section h2 {
+    font-size: 2rem;
+    color: #1976D2;
+    margin-bottom: 20px;
+}
+
+.story-section p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.goals-section ul {
+    list-style-type: disc;
+    padding-left: 40px;
+}
+
+.goals-section li,
+.looking-ahead-section li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .about-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    .mission-section,
+    .goals-section,
+    .stakeholders-section,
+    .commitment-section,
+    .looking-ahead-section,
+    .join-us-section {
+        grid-column: span 1;
+    }
+
+    .story-section {
+        grid-column: span 2;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .mission-section h2,
+    .story-section h2,
+    .goals-section h2,
+    .stakeholders-section h2,
+    .commitment-section h2,
+    .looking-ahead-section h2,
+    .join-us-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .mission-section p,
+    .story-section p,
+    .goals-section ul,
+    .stakeholders-section p,
+    .commitment-section p,
+    .looking-ahead-section p,
+    .join-us-section p {
+        font-size: 1rem;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+}

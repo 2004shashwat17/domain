@@ -1,0 +1,151 @@
+/* Center the game content */
+/* Instructions styling */
+.score-container {
+  margin: 20px 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.speak-button {
+  margin: 15px 0;
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.speak-button:hover {
+  background-color: #45a049; /* Darker green */
+}
+
+p {
+  font-size: 1.2rem;
+  color: #666; /* Slightly lighter color for instructions */
+  margin-bottom: 20px; /* Space between instructions and difficulty selector */
+}
+.game-container {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  margin: 0; /* Remove margins to allow full page coverage */
+  padding: 20px;
+  max-width: 100%; /* Ensure it takes full width */
+  height: 100vh; /* Full viewport height */
+  /* background-image: url("../assets/sound.gif"); */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px #8e868633;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+/* Main title styling */
+h1 {
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+/* Word display styling */
+.word-container {
+  margin: 20px 0;
+}
+
+.word-container h2 {
+  font-size: 2rem;
+  color: #000000;
+}
+
+.word-container span {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Start button styling */
+.start-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #0056b3;
+}
+
+/* Message display styling */
+.message-container {
+  margin-top: 20px;
+}
+
+.message-container p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Difficulty level container */
+.difficulty-container {
+  margin: 20px 0;
+}
+
+.difficulty-container label {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.difficulty-container select {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Animation for word appearance */
+.word-container span {
+  display: inline-block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 600px) {
+  .game-container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .word-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .start-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .message-container p {
+    font-size: 1rem;
+  }
+}
+

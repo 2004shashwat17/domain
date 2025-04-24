@@ -1,0 +1,46 @@
+.report-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.report-table th, .report-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.report-table th {
+    background-color: #f2f2f2;
+}
+
+.charts-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.chart {
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+.brain-development-animation {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.brain-development-animation h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+

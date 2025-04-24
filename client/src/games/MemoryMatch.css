@@ -1,0 +1,110 @@
+/* General container for the game */
+.memory-match-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f6f6f6; /* Changed to purple */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Game title styling */
+.memory-match-title {
+  font-size: 3em;
+  color: #333;
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* Instructions box */
+.instructions {
+  background-color: #b2c4d4;
+  border: 2px solid #cce;
+  padding: 20px;
+  width: 70%;
+  text-align: center;
+  margin-right: auto;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+.instructions h2 {
+  margin: 0 0 10px;
+  font-size: 2em;
+}
+
+.instructions p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+/* The game board styling */
+.memory-match {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+/* Cards */
+.card {
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  border-radius: 10px;
+}
+
+/* Front of the card */
+.card-front {
+  background: #1c87c9;
+  color: white;
+}
+
+/* Back of the card */
+.card-back {
+  background: #ffb86c;
+  transform: rotateY(180deg);
+}
+
+/* Stats for moves and score */
+.stats {
+  font-size: 1.5em;
+  color: #333;
+  margin-top: 20px;
+}
+
+.stats p {
+  margin: 5px 0;
+}

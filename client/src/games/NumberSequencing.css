@@ -1,0 +1,71 @@
+/* NumberSequencing.css */
+
+.number-sequencing {
+  text-align: center;
+  padding: 20px;
+  background-color: #3e7675; /* Light background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.instructions {
+  margin-bottom: 4px;
+}
+
+.speech-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.speech-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.difficulty-selector {
+  margin-bottom: 20px;
+}
+
+.sequence-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0; /* Margin around the grid */
+}
+
+.number-box,
+.alpha-box {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  margin: 10px;
+  border: 2px solid #4CAF50; /* Green border */
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 60px; /* Center text vertically */
+  background-color: #e0f7fa; /* Light blue background */
+  color: #000; /* Text color */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.number-box:active,
+.alpha-box:active {
+  background-color: #b2ebf2; /* Darker blue on active */
+}
+
+.number-box:hover,
+.alpha-box:hover {
+  transform: scale(1.1); /* Scale effect on hover */
+}
+
+.score {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}

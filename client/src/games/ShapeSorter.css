@@ -1,0 +1,356 @@
+.instructions {
+  margin-left: 160px; /* Adjust margin as needed */
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  background-color: white;
+}
+
+.puzzle-game {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,75,9,1) 35%, rgba(0,212,255,1) 100%);
+  text-align: center;
+}
+
+.puzzle-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  border: 50px solid #411b2c;
+  padding: 20px;
+}
+
+.shape-column, .words-column {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.shape {
+  width: 100px; /* Increased size */
+  height: 100px; /* Increased size */
+  cursor: grab;
+  transition: transform 0.3s ease;
+  margin: 10px 0;
+}
+
+/* Scale effect on hover */
+.shape:hover {
+  transform: scale(1.1); /* Scale up slightly */
+}
+
+/* Shake effect class */
+.shape.shake {
+  animation: shake 0.5s;
+}
+
+/* Keyframes for shake effect */
+@keyframes shake {
+  0% { transform: translate(0); }
+  25% { transform: translate(-5px); }
+  50% { transform: translate(5px); }
+  75% { transform: translate(-5px); }
+  100% { transform: translate(0); }
+}
+
+.shape:active {
+  cursor: grabbing;
+}
+
+/* Unique animation keyframes for the first five shapes */
+@keyframes moveCircle {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(20px, 10px); }
+  50% { transform: translate(-10px, 20px); }
+  75% { transform: translate(10px, -10px); }
+}
+
+@keyframes moveSquare {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-20px, 0); }
+  50% { transform: translate(0, 20px); }
+  75% { transform: translate(20px, 0); }
+}
+
+@keyframes moveTriangle {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(10px, 10px); }
+  50% { transform: translate(-10px, 20px); }
+  75% { transform: translate(10px, -10px); }
+}
+
+@keyframes movePentagon {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(15px, -10px); }
+  50% { transform: translate(-15px, 10px); }
+  75% { transform: translate(15px, 5px); }
+}
+
+@keyframes moveHexagon {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-15px, 15px); }
+  50% { transform: translate(15px, -10px); }
+  75% { transform: translate(-10px, 10px); }
+}
+
+/* Define new movement animations for the remaining shapes */
+@keyframes moveOtherShapes {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(10px, -5px); }
+  50% { transform: translate(-10px, 5px); }
+  75% { transform: translate(5px, 10px); }
+}
+
+.shape.circle {
+  background: radial-gradient(circle, #c66266, hsl(13, 38%, 32%));
+  border-radius: 50%;
+  animation: moveCircle 2s infinite; /* Unique animation for Circle */
+}
+
+.shape.square {
+  background: linear-gradient(to right, #632f54, #a6c1ee);
+  animation: moveSquare 2s infinite; /* Unique animation for Square */
+}
+
+.shape.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent; /* Increased size */
+  border-right: 50px solid transparent; /* Increased size */
+  border-bottom: 100px solid #613f0f; /* Increased size */
+  animation: moveTriangle 2s infinite; /* Unique animation for Triangle */
+}
+
+.shape.pentagon {
+  width: 0;
+  border-left: 50px solid transparent; /* Increased size */
+  border-right: 50px solid transparent; /* Increased size */
+  border-bottom: 80px solid #65172c; /* Increased size */
+  position: relative;
+  top: -40px; /* Adjusted position */
+  animation: movePentagon 2s infinite; /* Unique animation for Pentagon */
+}
+
+.shape.hexagon {
+  background: #230f14;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  animation: moveHexagon 2s infinite; /* Unique animation for Hexagon */
+}
+
+/* All other shapes will have the same movement */
+.shape.octagon {
+  background: #421d28;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Octagon */
+}
+
+.shape.star {
+  background: yellow;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Star */
+}
+
+.shape.heart {
+  background: linear-gradient(to right, #933030, #ff6f91);
+  width: 100px; /* Increased size */
+  height: 80px; /* Increased size */
+  position: relative;
+  top: -10px;
+  border-radius: 50% 50% 0 0;
+  transform: rotate(-45deg);
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Heart */
+}
+
+.shape.diamond {
+  background: linear-gradient(to right, #1b5c35, #0575e6);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Diamond */
+}
+
+.shape.parallelogram {
+  background: linear-gradient(to right, #ff758c, #561d35);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Parallelogram */
+}
+
+.shape.crescent {
+  background: linear-gradient(to right, #fddb92, #0f2526);
+  border-radius: 50%;
+  clip-path: circle(40% at 60% 50%);
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Crescent */
+}
+
+.shape.oval {
+  background: linear-gradient(to right, #f6d365, #ad3d1e);
+  border-radius: 50%;
+  width: 120px; /* Increased size */
+  height: 80px; /* Increased size */
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Oval */
+}
+
+.shape.trapezoid {
+  background: #421611;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Trapezoid */
+}
+
+.shape.cross {
+  background: #bf2d2d;
+  width: 100px; /* Increased size */
+  height: 30px; /* Increased size */
+  position: relative;
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Cross */
+}
+
+.shape.cross::before {
+  content: '';
+  background: #401058;
+  width: 30px; /* Increased size */
+  height: 100px; /* Increased size */
+  position: absolute;
+  left: 35px; /* Adjusted position */
+  top: -40px; /* Adjusted position */
+}
+
+.shape.zigzag {
+  background: #c04180;
+  clip-path: polygon(0 100%, 25% 100%, 50% 0, 75% 100%, 100% 100%);
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Zigzag */
+}
+
+.shape.arrow {
+  background: linear-gradient(to right, #15a545, #38f9d7);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Arrow */
+}
+
+.shape.semiCircle {
+  background: linear-gradient(to right, #ee9ca7, #861672);
+  width: 100px; /* Increased size */
+  height: 50px; /* Increased size */
+  border-radius: 100px 100px 0 0; /* Rounded top */
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for SemiCircle */
+}
+.shape.octagon {
+  background: #46a809;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Octagon */
+}
+
+.shape.star {
+  background: yellow;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Star */
+}
+
+.shape.heart {
+  background: linear-gradient(to right, #341021, #ff6f91);
+  width: 100px; /* Increased size */
+  height: 80px; /* Increased size */
+  position: relative;
+  top: -10px;
+  border-radius: 50% 50% 0 0;
+  transform: rotate(-45deg);
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Heart */
+}
+
+.shape.diamond {
+  background: linear-gradient(to right, #00f260, #0575e6);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Diamond */
+}
+
+.shape.parallelogram {
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Parallelogram */
+}
+
+.shape.crescent {
+  background: linear-gradient(to right, #ff6f91, #ff99c8);
+  width: 100px; /* Increased size */
+  height: 100px; /* Increased size */
+  position: relative;
+  border-radius: 50%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 50% 50%);
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Crescent */
+}
+
+.shape.oval {
+  background: #d1e8e4;
+  width: 150px; /* Increased size */
+  height: 100px; /* Increased size */
+  border-radius: 75px; /* Make it oval */
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Oval */
+}
+
+.shape.trapezoid {
+  background: linear-gradient(to right, #7b033b, #a6c1ee);
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 60px solid #d1e8e4; /* Base color for the trapezoid */
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Trapezoid */
+}
+
+.shape.cross {
+  background: linear-gradient(to right, #fbc2eb, #031a42);
+  position: relative;
+  width: 60px; /* Increased size */
+  height: 60px; /* Increased size */
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Cross */
+}
+
+.shape.zigzag {
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  position: relative;
+  width: 100px; /* Increased size */
+  height: 60px; /* Increased size */
+  clip-path: polygon(0 0, 25% 50%, 0 100%, 100% 100%, 75% 50%, 100% 0);
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Zigzag */
+}
+
+.shape.arrow {
+  background: linear-gradient(to right, #23031a, #a6c1ee);
+  position: relative;
+  width: 100px; /* Increased size */
+  height: 60px; /* Increased size */
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0 50%);
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Arrow */
+}
+
+.shape.semiCircle {
+  background: linear-gradient(to right, #fbc2eb, #101113);
+  width: 100px; /* Increased size */
+  height: 50px; /* Increased size */
+  border-radius: 100px 100px 0 0; /* Make it a semi-circle */
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Semi-Circle */
+}
+
+.shape.gear {
+  background: linear-gradient(to right, #fbc2eb, #23457f);
+  position: relative;
+  width: 80px; /* Increased size */
+  height: 80px; /* Increased size */
+  clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%);
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Gear */
+}
+
+.shape.rhombus {
+  background: linear-gradient(to right, #231a20, #a6c1ee);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Rhombus */
+}
+
+.shape.flower {
+  background: linear-gradient(to right, #bd3897, #a6c1ee);
+  position: relative;
+  width: 80px; /* Increased size */
+  height: 80px; /* Increased size */
+  clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+  animation: moveOtherShapes 2s infinite; /* Uniform animation for Flower */
+}
+

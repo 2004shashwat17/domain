@@ -1,0 +1,614 @@
+.about-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: rgb(10, 10, 10);
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+  margin-top: 20px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.about-button:hover {
+  background-color: #7b7b80;
+  background-clip: border-box;
+}
+
+.main {
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  margin-top: 11px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+}
+
+.main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: -1;
+}
+
+.seminar {
+  position: relative;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  animation: float-right-to-left 16s linear infinite;
+}
+.seminar-button {
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes float-right-to-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+header {
+  background-image: linear-gradient(rgb(41, 48, 97), rgb(89, 152, 193));
+  color: rgb(0, 0, 0);
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1350px; /* Ensure width matches footer */
+  margin: 0 auto; /* Center content */
+  position: relative;
+  width: 100%;
+}
+.header-nav .header-rewards {
+  display: flex;
+  align-items: center;
+}
+.profile-icon svg {
+  color: red; /* This changes the color of the SVG to red */
+}
+.header-nav .header-rewards .about-button {
+  margin: 20 5px;
+}
+
+.header-nav .weekly-report-button {
+  margin-left: auto; 
+}
+.header2 {
+  background-image: linear-gradient(rgb(82, 36, 99), rgb(89, 152, 193));
+  border-radius: 12px; /* Curved borders */
+  padding: 20px;
+  width: 100%; /* Full width of the screen */
+  margin: 0; /* Remove the margin to fully cover the screen horizontally */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.header-nav2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-rewards2 {
+  display: flex;
+  justify-content: space-between; /* Space between buttons */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  margin-top: 3px;
+  overflow-x: auto; /* Allows horizontal scrolling if the buttons overflow */
+  padding: 1px;
+}
+
+.about-button2 {
+  background-color: #f0f0f0; /* Button background */
+  color: #333; /* Button text color */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 5px 10px;
+  margin: 5px;
+  text-decoration: none;
+  text-align: center;
+  min-width: 150px; /* Set minimum button width */
+  transition: background-color 0.3s ease;
+}
+
+.about-button2:hover {
+  background-color: #e0e0e0; /* Hover effect */
+}
+
+
+h1 {
+  position: absolute; /* Position absolute to center it */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Center text horizontally and vertically */
+  margin: 0;
+  font-size: 2rem;
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  position: relative;
+  background-image: url('../assets/popup.avif');
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  max-width: 550px; /* Adjust width as needed */
+  width: 100%;
+  text-align: center; /* Center-align text horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align content horizontally */
+  justify-content: center; /* Center-align content vertically */
+}
+
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align form fields */
+}
+
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 35px;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-button:hover {
+  color: red;
+}
+/* Register Button Styles */
+.register-button {
+  background-color: #007bff; /* Primary color */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.register-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.register-button:focus {
+  outline: none;
+}
+/* Form Styles */
+.popup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-form label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.popup-form input[type="text"],
+.popup-form input[type="email"],
+.popup-form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.popup-form input[type="text"]:focus,
+.popup-form input[type="email"]:focus,
+.popup-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.play-now-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.game-link:hover .play-now-overlay {
+  display: block;
+}
+
+.game-link {
+  position: relative;
+}
+.sorting-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center aligns the sorting bar horizontally */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sorting-bar label {
+  font-weight: bold;
+}
+
+.sorting-bar select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.game-grid {
+  background-image: linear-gradient(rgb(129, 52, 89), rgb(45, 45, 96));
+  background-position: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.game-item {
+  text-align: center;
+}
+
+.game-link {
+  display: block;
+  background-image: linear-gradient(rgb(113, 36, 73), rgb(26, 26, 73));
+  color: rgb(0, 0, 0);
+  height: 250px;
+  width: 90%;
+  border-radius: 8px;
+  transition: transform 0.6s ease, background-color 0.3s ease;
+  position: relative;
+  perspective: 1000px;
+}
+
+.game-link.memory-match {
+  background-image: url('../assets/memory.jpeg');
+}
+.game-link.shape-sorter {
+  background-image: url('../assets/shape.png');
+}
+.game-link.color-quiz {
+  background-image: url('../assets/color.png');
+}
+.game-link.puzzle-game {
+  background-image: url('../assets/puzzle.jpg');
+}
+.game-link.math-game {
+  background-image: url('../assets/brain.gif');
+}
+.game-link.word-search {
+  background-image: url('../assets/word.avif');
+}
+.game-link.letter {
+  background-image: url('../assets/letter.jpg');
+}
+.game-link.building {
+  background-image: url('../assets/wordsearch.png');
+}
+.game-link.maze {
+  background-image: url('../assets/maze.jpg');
+}
+.game-link.sound {
+  background-image: url('../assets/sound.avif');
+}
+
+.game-link:hover {
+  transform: rotateY(180deg);
+}
+
+.game-link::before {
+  content: "Play Now";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.game-link:hover::before {
+  opacity: 1;
+}
+
+.game-name {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+footer {
+  background-image: linear-gradient(rgb(48, 55, 110), rgb(89, 152, 193));
+  color: rgb(0, 0, 0);
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.floating-chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #580e7a;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  font-size: 24px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.chatbot-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 350px;
+  height: 500px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.chatbot-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+/* Premium Content Section */
+.premium-content {
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  background-image: linear-gradient(rgb(82, 36, 99), rgb(89, 152, 193));
+  border-radius: 10px;
+  width: 80%;
+  max-width: 900px;
+}
+
+.premium-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-item {
+  min-width: 100%;
+  transition: transform 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  transform: translateX(0);
+}
+
+.carousel-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.carousel-item p {
+  color: #000000;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.carousel-item span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+/* Styling for the Weekly Seminar button */
+.seminar {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+.seminar-button {
+  background-color: #22213b;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.seminar-button:hover {
+  background-color: #252525;
+}
+
+.footer-content {
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.footer-content p {
+  color: #000000;
+}
+
+.footer-text {
+   color: #000000;
+  flex: 1;
+  text-align: center;
+}
+
+.social-links {
+  margin-left: 10px;
+}
+
+.social-links a {
+  color: rgb(0, 0, 0);
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #000000;
+}
+/* Responsive Styles for Tablets */
+@media (max-width: 1024px) {
+  .about-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .main {
+    background-size: contain;
+  }
+
+  .header-nav {
+    flex-direction: column;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .about-button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .header-nav {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .game-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .popup-content {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .floating-chat-icon {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+/* Mobile-First Styles */
+@media (max-width: 480px) {
+  .about-button {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  .game-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .header-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-content {
+    text-align: center;
+  }
+
+  .premium-content {
+    width: 90%;
+  }
+
+  .popup-content {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .floating-chat-icon {
+    bottom: 5px;
+    right: 5px;
+  }
+
+  .social-links a {
+    font-size: 16px;
+  }
+}

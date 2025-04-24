@@ -1,0 +1,49 @@
+/* Wrapper for the profile section with background image */
+.profile-wrapper {
+  background-image: url('../assets/profile.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 250px; /* This controls the space around the grid */
+}
+
+/* Styles for the profile section grid */
+.profile-section {
+  padding: 20px;
+  background-color: #d7d7d7;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 380px;
+  margin: 0 auto;
+  margin-top: auto;
+}
+
+/* Centering text inside the profile section */
+.profile-info {
+  text-align: center;
+}
+
+/* Heading style */
+.profile-info h2 {
+  margin-bottom: 20px;
+}
+
+/* Paragraph style */
+.profile-info p {
+  margin: 10px 0;
+}
+
+/* Button style */
+.logout-button {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Hover effect for the button */
+.logout-button:hover {
+  background-color: #ff1a1a;
+}

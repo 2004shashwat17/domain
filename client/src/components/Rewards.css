@@ -1,0 +1,90 @@
+/* Rewards.css */
+
+/* Styles specific to the body when Rewards is rendered */
+.body-rewards {
+  height: 600px;
+  background-color: #4f094b; /* Example: Light grey background color */
+  font-family: 'Courier New', Courier, monospace; /* Example: Font family */
+}
+
+/* Existing styles for the Rewards component */
+.rewards-section {
+  background-image: url("../assets/rewards2.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  margin: 30px 0;
+  text-align: center;
+  width: 100%;
+  position: relative; /* Make the container relative for absolute positioning */
+}
+
+.rewards-section h2 {
+  font-size: 28px;
+  color: #000000;
+  margin-bottom: 35px;
+}
+
+.total-points {
+  font-size: 20px;
+  color: #ff6347;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  margin-bottom: 0;
+}
+
+.rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 66px;
+  justify-items: center;
+  width: 100%;
+}
+
+.reward-item {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reward-item h3 {
+  font-size: 30px;
+  color: #000000;
+  margin: 0 0 10px;
+}
+
+.reward-item p {
+  font-size: 16px;
+  color: #000000;
+  margin: 60px 0;
+}
+
+.reward-price {
+  font-size: 18px;
+  color: #000000;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.redeem-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.redeem-button:hover {
+  background-color: #0056b3;
+}

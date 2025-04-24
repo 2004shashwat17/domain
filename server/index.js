@@ -33,8 +33,8 @@ app.post('/payment', async (req, res) => {
                 }
             ],
             mode: 'payment',
-            success_url: 'http://localhost:3001/',
-            cancel_url: 'http://localhost:3001/cancel',
+            success_url: 'https://braindomain.onrender.com/',
+            cancel_url: 'https://braindomain.onrender.com/cancel',
             customer_email: 'demo@gmail.com',
         });
 

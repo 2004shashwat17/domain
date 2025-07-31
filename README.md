@@ -114,3 +114,7 @@ npm install
 
 # Start both
 npm run dev
+
+💬 Contribute Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+📧 Contact For queries or collaboration: 📮 shashwats500@gmail.com 🔗 LinkedIn 📁 https://shashwatsaxena.netlify.app/

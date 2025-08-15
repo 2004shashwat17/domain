@@ -98,6 +98,9 @@ AI chatbot for guidance and accessibility
 
 Fully responsive and accessible UI design
 
+For Sign Language game  --> https://github.com/2004shashwat17/signLanguage2
+For Handwriting game using tessaract ocr -> https://github.com/2004shashwat17/usetessaractOCR
+
 🚀 Setup Locally
 
 # Clone the project
